@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <ul class="nav-links">
             <li><a href="index.html" id="nav-home">Home</a></li>
             <li><a href="about.html" id="nav-about">About Me</a></li>
+            <li><a href="work.html" id="nav-work">Work</a></li>
             <li><a href="resume.html" id="nav-resume">Resume</a></li>
             <li><a href="contact.html" id="nav-contact">Contact</a></li>
           </ul>
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMap = {
     'index.html': 'nav-home',
     'about.html': 'nav-about',
+    'work.html': 'nav-work',
     'resume.html': 'nav-resume',
     'contact.html': 'nav-contact'
   };
