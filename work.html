@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work | Bryton Bergren</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="nav.js" defer></script>
+  <style>
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin: 1rem 0;
+    }
+
+    .tag {
+      background-color: #f1f5f9;
+      color: #475569;
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <h1 class="page-title">Selected Work & Projects</h1>
+    <p style="color: #64748b; max-width: 700px;">
+      A showcase of web applications, data modeling systems, analytics projects, and technical initiatives.
+    </p>
+
+    <div class="work-grid">
+
+      <!-- Project 1 -->
+      <article class="project-card">
+        <div>
+          <h2 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Multi-Page Web Portfolio Architecture</h2>
+          <p style="color: #64748b; font-size: 0.95rem;">
+            A responsive static site template built with semantic HTML5, CSS variables, and a modular JavaScript navigation engine deployed seamlessly on GitHub Pages.
+          </p>
+          <div class="tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">GitHub Pages</span>
+          </div>
+        </div>
+        <a href="https://github.com/your-username/portfolio" target="_blank" style="font-weight: 600; margin-top: 0.5rem;">View Repository &rarr;</a>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card">
+        <div>
+          <h2 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Relational Database & Data Schema</h2>
+          <p style="color: #64748b; font-size: 0.95rem;">
+            An enterprise database design project featuring normalized schemas, foreign key relationships, and optimized SQL queries for operational data analysis.
+          </p>
+          <div class="tags">
+            <span class="tag">SQL</span>
+            <span class="tag">MySQL Workbench</span>
+            <span class="tag">Data Modeling</span>
+          </div>
+        </div>
+        <a href="#" style="font-weight: 600; margin-top: 0.5rem;">Read Case Study &rarr;</a>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card">
+        <div>
+          <h2 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Operations & Supply Variance Model</h2>
+          <p style="color: #64748b; font-size: 0.95rem;">
+            A quantitative modeling framework for evaluating inventory forecasting accuracy, cost variance optimization, and supply chain metrics.
+          </p>
+          <div class="tags">
+            <span class="tag">Analytics</span>
+            <span class="tag">Financial Modeling</span>
+            <span class="tag">Process Control</span>
+          </div>
+        </div>
+        <a href="#" style="font-weight: 600; margin-top: 0.5rem;">View Documentation &rarr;</a>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Bryton Bergren. Hosted on GitHub Pages.</p>
+  </footer>
+
+</body>
+</html>
