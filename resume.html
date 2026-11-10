@@ -3,49 +3,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume | Bryton Bergren</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="nav.js" defer></script>
+  <title>Resume - Morning Bell Coffee Roasters</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f8f1e7;
+      color: #482514;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #fffaf3;
+      padding: 12px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo img {
+      width: 95px;
+      height: 95px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .logo a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #482514;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: #a66b42;
+    }
+
+    /* RESUME SECTION */
+    .resume-section {
+      padding: 60px 8%;
+      text-align: center;
+    }
+
+    .section-label {
+      font-size: 12px;
+      letter-spacing: 3px;
+      font-weight: bold;
+      color: #a66b42;
+      margin-bottom: 15px;
+    }
+
+    .resume-section h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(35px, 4vw, 48px);
+      color: #482514;
+      margin-bottom: 30px;
+    }
+
+    /* RESUME CONTAINER & IFRAME */
+    .resume-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fffaf3;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 4px 15px rgba(72, 37, 20, 0.08);
+    }
+
+    .resume-frame {
+      width: 100%;
+      height: 800px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .fallback-link {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #765744;
+    }
+
+    .fallback-link a {
+      color: #482514;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .fallback-link a:hover {
+      color: #a66b42;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #482514;
+      color: #fffaf3;
+      text-align: center;
+      padding: 28px 15px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-top: 60px;
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .resume-frame {
+        height: 550px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <main>
-    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-      <h1 class="page-title" style="border: none; margin: 0; padding: 0;">Resume</h1>
-      <a href="#" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Download PDF (Optional)</a>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="81553fbe-f593-4e25-b75f-9fea658851b2.png" alt="Morning Bell Coffee Roasters">
+      </a>
     </div>
-    <hr style="border: 0; border-top: 2px solid var(--border-color); margin: 1rem 0 2rem;">
 
-    <!-- Technical Skills -->
-    <section style="margin-bottom: 2.5rem;">
-      <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent-color);">Technical Skills</h2>
-      <div class="card">
-        <p><strong>Languages & Web:</strong> HTML5, CSS3, JavaScript, SQL, Python</p>
-        <p style="margin-top: 0.5rem;"><strong>Tools & Platforms:</strong> GitHub Pages, Git, MySQL Workbench, VS Code</p>
-        <p style="margin-top: 0.5rem;"><strong>Core Competencies:</strong> Responsive Design, Database Schema Modeling, Quantitative Analysis, AP Style Editing</p>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="ads.html">OUR ADS</a>
+      <a href="resume.html" class="active">RESUME</a>
+    </nav>
+  </header>
+
+  <!-- RESUME SECTION -->
+  <section class="resume-section">
+    <div class="section-label">PROFESSIONAL BACKGROUND</div>
+    <h1>Our Resume &amp; Info</h1>
+
+    <div class="resume-container">
+      <!-- 
+        INSTRUCTIONS: 
+        Replace the placeholder URL inside the src="..." below with the link to your resume.
+      -->
+      <iframe 
+        src="YOUR_RESUME_LINK_HERE" 
+        class="resume-frame" 
+        title="Resume"
+      ></iframe>
+
+      <div class="fallback-link">
+        Having trouble viewing? <a href="YOUR_RESUME_LINK_HERE" target="_blank">Open the resume in a new tab</a>.
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Key Projects -->
-    <section style="margin-bottom: 2.5rem;">
-      <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent-color);">Featured Projects</h2>
-      <div style="display: flex; flex-direction: column; gap: 1.25rem;">
-        <div class="card">
-          <h3>Multi-Page Web Portfolio Architecture</h3>
-          <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 0.5rem;">Front-End Web Development | GitHub Pages</p>
-          <p>Engineered a responsive, multi-page portfolio website using semantic HTML5, CSS variables, and dynamic navigation execution for fast load performance across desktop and mobile devices.</p>
-        </div>
-        <div class="card">
-          <h3>Relational Database & Data Modeling Schema</h3>
-          <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 0.5rem;">Database Systems | SQL</p>
-          <p>Designed structured ER diagrams and relational SQL database schemas for tracking complex dataset relationships and operational parameters efficiently.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 Bryton Bergren. Hosted on GitHub Pages.</p>
+    MORNING BELL COFFEE ROASTERS · FRESH ROASTED, EVERY DAY.
   </footer>
 
 </body>
