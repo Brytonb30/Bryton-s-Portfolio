@@ -3,190 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #e0f2fe; /* Sky blue background */
-      color: #0f172a;
-      line-height: 1.6;
-      display: flex;
-      min-height: 100vh;
-    }
-
-    /* SIDEBAR NAVIGATION */
-    aside {
-      width: 260px;
-      background-color: #004d40; /* Dark teal sidebar */
-      color: #ffffff;
-      padding: 40px 24px;
-      display: flex;
-      flex-direction: column;
-      flex-shrink: 0;
-    }
-
-    .brand {
-      font-size: 20px;
-      font-weight: bold;
-      color: #ffffff;
-      margin-bottom: 40px;
-      letter-spacing: 0.5px;
-    }
-
-    nav {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #ffffff; /* High contrast white text */
-      font-size: 15px;
-      font-weight: 600;
-      padding: 10px 14px;
-      border-radius: 6px;
-      transition: background-color 0.2s ease;
-    }
-
-    nav a:hover, nav a.active {
-      background-color: rgba(255, 255, 255, 0.15);
-    }
-
-    /* MAIN CONTENT AREA */
-    main {
-      flex: 1;
-      padding: 50px 6%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .page-header {
-      margin-bottom: 30px;
-    }
-
-    .page-header h1 {
-      font-size: 36px;
-      color: #0f172a;
-      margin-bottom: 8px;
-    }
-
-    .page-header p {
-      color: #475569;
-      font-size: 16px;
-    }
-
-    /* RESUME EMBED CONTAINER */
-    .resume-container {
-      width: 100%;
-      max-width: 950px;
-      background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-      padding: 16px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .resume-frame {
-      width: 100%;
-      height: 800px;
-      border: none;
-      border-radius: 6px;
-      background-color: #f8fafc;
-    }
-
-    .fallback-link {
-      margin-top: 16px;
-      text-align: center;
-      font-size: 14px;
-      color: #64748b;
-    }
-
-    .fallback-link a {
-      color: #004d40;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
-    .fallback-link a:hover {
-      color: #00796b;
-    }
-
-    /* MOBILE RESPONSIVE LAYOUT */
-    @media (max-width: 800px) {
-      body {
-        flex-direction: column;
-      }
-
-      aside {
-        width: 100%;
-        padding: 24px 6%;
-      }
-
-      nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      main {
-        padding: 30px 4%;
-      }
-
-      .resume-frame {
-        height: 550px;
-      }
-    }
-  </style>
+  <title>Resume | Bryton Bergren</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="nav.js" defer></script>
 </head>
-
 <body>
 
-  <!-- SIDEBAR MENU -->
-  <aside>
-    <div class="brand">PORTFOLIO</div>
-    <nav>
-      <a href="index.html">HOME</a>
-      <a href="resume.html" class="active">RESUME</a>
-      <a href="projects.html">PROJECTS</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
-  </aside>
-
-  <!-- MAIN RESUME AREA -->
   <main>
-    <div class="page-header">
-      <h1>Resume</h1>
-      <p>View my interactive resume directly below or open the source link.</p>
-    </div>
+    <section style="padding: 4rem 0 2rem;">
+      <h1 style="font-size: 2.75rem; margin-bottom: 1rem; line-height: 1.2;">My Resume.</h1>
+      <p style="font-size: 1.25rem; color: #64748b; max-width: 680px; margin-bottom: 2rem;">
+        View my professional credentials, education, and technical experience embedded below, or download a copy for your records.
+      </p>
+    </section>
 
-    <div class="resume-container">
-      <!-- REPLACE YOUR_RESUME_LINK_HERE WITH YOUR ACTUAL FILE LINK -->
-      <iframe 
-        src="Resume 2-4-2025.pdf" 
-        class="resume-frame" 
-        title="Resume Document"
-      ></iframe>
+    <!-- RESUME EMBED SECTION -->
+    <section style="margin-bottom: 4rem;">
+      <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+        
+        <!-- 
+          INSTRUCTIONS: 
+          Replace the src="..." link below with your actual hosted resume file path (e.g., "resume.pdf").
+        -->
+        <iframe 
+          src="Resume 2-4-2025.pdf" 
+          style="width: 100%; height: 800px; border: none; border-radius: 4px;" 
+          title="Bryton Bergren Resume"
+        ></iframe>
 
-      <div class="fallback-link">
-        Unable to view the embedded file? 
-        <a href="Resume 2-4-2025.pdf" target="_blank" rel="noopener">Open resume in new tab</a>.
+        <div style="margin-top: 1rem; text-align: center; font-size: 0.95rem; color: #64748b;">
+          Having trouble viewing? <a href="Resume 2-4-2025.pdf" target="_blank" style="color: #0f172a; font-weight: bold; text-decoration: underline;">Open resume in a new tab</a>.
+        </div>
+
       </div>
-    </div>
+    </section>
   </main>
+
+  <footer>
+    <p>&copy; 2026 Bryton Bergren. Hosted on GitHub Pages.</p>
+  </footer>
 
 </body>
 </html>
