@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume - Morning Bell Coffee Roasters</title>
+  <title>Resume</title>
 
   <style>
     * {
@@ -18,129 +18,132 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f8f1e7;
-      color: #482514;
+      background-color: #e0f2fe; /* Sky blue background */
+      color: #0f172a;
       line-height: 1.6;
-    }
-
-    /* HEADER */
-    header {
-      background-color: #fffaf3;
-      padding: 12px 8%;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      z-index: 10;
+      min-height: 100vh;
     }
 
-    .logo img {
-      width: 95px;
-      height: 95px;
-      object-fit: contain;
-      display: block;
-    }
-
-    .logo a {
+    /* SIDEBAR NAVIGATION */
+    aside {
+      width: 260px;
+      background-color: #004d40; /* Dark teal sidebar */
+      color: #ffffff;
+      padding: 40px 24px;
       display: flex;
-      align-items: center;
-      text-decoration: none;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 40px;
+      letter-spacing: 0.5px;
     }
 
     nav {
       display: flex;
-      gap: 30px;
+      flex-direction: column;
+      gap: 16px;
     }
 
     nav a {
       text-decoration: none;
-      color: #482514;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      transition: color 0.3s ease;
+      color: #ffffff; /* High contrast white text */
+      font-size: 15px;
+      font-weight: 600;
+      padding: 10px 14px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
     }
 
     nav a:hover, nav a.active {
-      color: #a66b42;
+      background-color: rgba(255, 255, 255, 0.15);
     }
 
-    /* RESUME SECTION */
-    .resume-section {
-      padding: 60px 8%;
-      text-align: center;
+    /* MAIN CONTENT AREA */
+    main {
+      flex: 1;
+      padding: 50px 6%;
+      display: flex;
+      flex-direction: column;
     }
 
-    .section-label {
-      font-size: 12px;
-      letter-spacing: 3px;
-      font-weight: bold;
-      color: #a66b42;
-      margin-bottom: 15px;
-    }
-
-    .resume-section h1 {
-      font-family: Georgia, serif;
-      font-size: clamp(35px, 4vw, 48px);
-      color: #482514;
+    .page-header {
       margin-bottom: 30px;
     }
 
-    /* RESUME CONTAINER & IFRAME */
+    .page-header h1 {
+      font-size: 36px;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .page-header p {
+      color: #475569;
+      font-size: 16px;
+    }
+
+    /* RESUME EMBED CONTAINER */
     .resume-container {
-      max-width: 900px;
-      margin: 0 auto;
-      background: #fffaf3;
-      padding: 20px;
-      border-radius: 6px;
-      box-shadow: 0 4px 15px rgba(72, 37, 20, 0.08);
+      width: 100%;
+      max-width: 950px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .resume-frame {
       width: 100%;
       height: 800px;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
+      background-color: #f8fafc;
     }
 
     .fallback-link {
-      margin-top: 20px;
+      margin-top: 16px;
+      text-align: center;
       font-size: 14px;
-      color: #765744;
+      color: #64748b;
     }
 
     .fallback-link a {
-      color: #482514;
+      color: #004d40;
       font-weight: bold;
       text-decoration: underline;
     }
 
     .fallback-link a:hover {
-      color: #a66b42;
+      color: #00796b;
     }
 
-    /* FOOTER */
-    footer {
-      background-color: #482514;
-      color: #fffaf3;
-      text-align: center;
-      padding: 28px 15px;
-      font-size: 12px;
-      letter-spacing: 2px;
-      margin-top: 60px;
-    }
-
-    /* MOBILE RESPONSIVE */
+    /* MOBILE RESPONSIVE LAYOUT */
     @media (max-width: 800px) {
-      header {
+      body {
         flex-direction: column;
-        gap: 15px;
+      }
+
+      aside {
+        width: 100%;
+        padding: 24px 6%;
       }
 
       nav {
-        gap: 18px;
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        gap: 10px;
+      }
+
+      main {
+        padding: 30px 4%;
       }
 
       .resume-frame {
@@ -152,47 +155,38 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo">
-      <a href="index.html">
-        <img src="81553fbe-f593-4e25-b75f-9fea658851b2.png" alt="Morning Bell Coffee Roasters">
-      </a>
-    </div>
-
+  <!-- SIDEBAR MENU -->
+  <aside>
+    <div class="brand">PORTFOLIO</div>
     <nav>
       <a href="index.html">HOME</a>
-      <a href="ads.html">OUR ADS</a>
       <a href="resume.html" class="active">RESUME</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="contact.html">CONTACT</a>
     </nav>
-  </header>
+  </aside>
 
-  <!-- RESUME SECTION -->
-  <section class="resume-section">
-    <div class="section-label">PROFESSIONAL BACKGROUND</div>
-    <h1>Our Resume &amp; Info</h1>
+  <!-- MAIN RESUME AREA -->
+  <main>
+    <div class="page-header">
+      <h1>Resume</h1>
+      <p>View my interactive resume directly below or open the source link.</p>
+    </div>
 
     <div class="resume-container">
-      <!-- 
-        INSTRUCTIONS: 
-        Replace the placeholder URL inside the src="..." below with the link to your resume.
-      -->
+      <!-- REPLACE YOUR_RESUME_LINK_HERE WITH YOUR ACTUAL FILE LINK -->
       <iframe 
-        src=Resume 2-4-2025.pdf 
+        src="Resume 2-4-2025.pdf" 
         class="resume-frame" 
-        title="Resume"
+        title="Resume Document"
       ></iframe>
 
       <div class="fallback-link">
-        Having trouble viewing? <a href="Resume 2-4-2025.pdf" target="_blank">Open the resume in a new tab</a>.
+        Unable to view the embedded file? 
+        <a href="Resume 2-4-2025.pdf" target="_blank" rel="noopener">Open resume in new tab</a>.
       </div>
     </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    MORNING BELL COFFEE ROASTERS · FRESH ROASTED, EVERY DAY.
-  </footer>
+  </main>
 
 </body>
 </html>
